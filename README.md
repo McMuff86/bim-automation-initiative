@@ -10,13 +10,21 @@
 
 ## Getting Started
 
+### One-command setup (Windows/PowerShell)
+```powershell
+pwsh scripts/dev-setup.ps1
+```
+- Installs/syncs Python deps using `uv` and runs tests
+- Installs web deps with pnpm if available, falls back to npm otherwise
+
 ### Webviewer (Client)
-- Requirements: Node 18+, pnpm
+- Requirements: Node 18+
+- If pnpm is missing, either install globally (`npm -g i pnpm@9`) or use npm
 - Commands:
   ```bash
   cd src/webviewer
-  pnpm i
-  pnpm dev
+  pnpm i   # or: npm i
+  pnpm dev # or: npm run dev
   ```
 
 ### (Optional) Server
