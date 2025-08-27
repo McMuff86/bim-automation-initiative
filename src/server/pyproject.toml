@@ -1,0 +1,23 @@
+[project]
+name = "bim-automation-server"
+version = "0.1.0"
+description = "Optional backend for BIM Automation Initiative (pre-processing, API)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "BIM Automation Initiative" }
+]
+
+dependencies = [
+  # Minimal test/runtime deps; keep server optional for MVP
+  "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["app/tests"]
+
+[tool.uv]
+index-url = "https://pypi.org/simple"
+
